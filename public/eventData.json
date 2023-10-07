@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "service_img": "https://i.ibb.co/GkJSwPP/Concerts-and-Music-Festivals.jpg",
+    "serviceName": "Concerts and Music Festivals",
+    "eventTitle": "Summer Music Festival",
+    "img": "https://i.ibb.co/312Qjs1/mat-napo-g3989-Gk-SHg8-unsplash.jpg",
+    "ticketPrice": "$75.00",
+    "description": "Summer Music Festival is a vibrant celebration of music and community. Experience the thrill of live performances from renowned artists in a festive atmosphere. From pulsating beats to soulful melodies, immerse yourself in the magic of summer nights, creating unforgettable memories with friends and fellow music lovers. Join us for a musical journey under the stars!",
+    "userId": 101,
+    "userName": "MusicLover123",
+    "rating": 4,
+    "comment": "Fantastic event! The lineup was amazing, and the atmosphere was electric."
+  },
+  {
+    "id": 2,
+    "service_img": "https://i.ibb.co/825QVq1/kyle-head-p6r-NTd-APbuk-unsplash-1.jpg",
+    "serviceName": "Theater and Performing Arts",
+    "eventTitle": "Classic Theater Night",
+    "img": "https://i.ibb.co/HGTzB7Y/kilyan-sockalingum-n-W1n9e-NHOsc-unsplash.jpg",
+    "ticketPrice": "$35.00",
+    "description": "Classic Theater Night is a distinguished service curated for enthusiasts of timeless drama and theatrical artistry. Immerse yourself in the elegance of the classics as renowned actors breathe life into iconic characters. From Shakespearean tragedies to Greek epics, this service offers a curated selection of historically significant plays, meticulously staged for an immersive and authentic experience. Revel in the grandeur of period costumes, meticulously designed sets, and unparalleled acting talent, all converging to transport you to different eras and narratives. Whether you're a theater aficionado or a newcomer seeking the magic of the stage, Classic Theater Night promises unforgettable evenings filled with cultural richness, artistic excellence, and the sheer joy of live performance.",
+    "userId": 102,
+    "userName": "TheaterBuff",
+    "rating": 5,
+    "comment": "Incredible performance! The actors brought Shakespeare's words to life."
+  },
+  {
+    "id": 3,
+    "service_img": "https://i.ibb.co/QYXVzys/1905-i030-020-red-carpet-with-curt.jpg",
+    "serviceName": "Film Screenings and Premieres",
+    "eventTitle": "FilmFest 2023 Opening Night",
+    "img": "https://i.ibb.co/vVzGCcG/lff-prmiere-the-lobster-2015-001.jpg",
+    "ticketPrice": "$20.00",
+    "description": "Kick off the FilmFest with the premiere of a highly anticipated film.",
+    "userId": 103,
+    "userName": "MovieBuff87",
+    "rating": 4,
+    "comment": "Great movie selection and a well-organized event."
+  },
+  {
+    "id": 4,
+    "service_img": "https://i.ibb.co/KwVY7fR/Screenshot-4.png",
+    "serviceName": "Comedy Shows",
+    "eventTitle": "Stand-up Comedy Night",
+    "img": "https://i.ibb.co/M8Qfvwf/2.jpg",
+    "ticketPrice": "$25.00",
+    "description": "Get ready to laugh your heart out with top comedians in the industry.Stand-up Comedy Night promises laughter-filled evenings in a cozy ambiance. Our service offers a lineup of top-notch comedians, delivering rib-tickling performances. Enjoy a night of hilarity with friends as we provide comfortable seating, a well-stocked bar, and delectable bites. Get ready for an uproarious experience, where every joke lands and smiles abound!",
+    "userId": 104,
+    "userName": "LaughOutLoud",
+    "rating": 5,
+    "comment": "Hilarious show! My cheeks hurt from laughing so much."
+  },
+  {
+    "id": 5,
+    "service_img": "https://i.ibb.co/R4YNkhT/sports-tools.jpg",
+    "serviceName": "Sports Events",
+    "eventTitle": "NBA Finals",
+    "img": "https://i.ibb.co/z6YbXMs/170831848-0.jpg",
+    "ticketPrice": "$90.00",
+    "description": "Cheer for your favorite NBA team in the thrilling championship finals.",
+    "userId": 105,
+    "userName": "SportsFanatic22",
+    "rating": 5,
+    "comment": "Intense game! Great atmosphere and fantastic plays."
+  },
+  {
+    "id": 6,
+    "service_img": "https://i.ibb.co/MgfdgsQ/ribbon-cutting.jpg",
+    "serviceName": "Product Launch",
+    "eventTitle": "Tech Innovations Expo",
+    "img": "https://i.ibb.co/MgfdgsQ/ribbon-cutting.jpg",
+    "ticketPrice": "Free Entry",
+    "description": "Be the first to experience groundbreaking tech products and innovations.",
+    "userId": 106,
+    "userName": "TechEnthusiast",
+    "rating": 4,
+    "comment": "Exciting event! Got to see the latest tech advancements up close."
+  }
+]
