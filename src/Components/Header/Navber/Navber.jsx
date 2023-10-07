@@ -2,17 +2,41 @@ import { Link, NavLink } from "react-router-dom";
 
 
 const Navber = () => {
+
     const NavLinks = <>
-        <li ><NavLink to="/">Home</NavLink></li>
-        <li><NavLink>Servises</NavLink></li>
-        <li><NavLink>Abouts Us</NavLink></li>
-        
+        <li className="text-lg"><NavLink
+            to="/"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-rose-700 underline link link-hover" : ""
+            }
+        >
+            Home
+        </NavLink></li>
+        <li className="text-lg"><NavLink
+            to="/servises"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-rose-700 underline link link-hover" : ""
+            }
+        >
+            Servises
+        </NavLink></li>
+
+        <li className="text-lg"><NavLink
+            to="/abouts"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-rose-700 underline link link-hover" : ""
+            }
+        >
+            Abouts Us
+        </NavLink></li>
+
+
 
     </>
     return (
-        <div className="navbar bg-rose-700">
+        <div className="navbar my-4">
             <div className="navbar-start">
-                <div  className="dropdown">
+                <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
@@ -20,16 +44,16 @@ const Navber = () => {
                         {NavLinks}
                     </ul>
                 </div>
-                <Link className="btn bg-rose-700 border-none normal-case text-xl"> Infinity<span className="text-white">Events</span></Link>
+                <Link className="btn bg-white border-none normal-case text-xl"> Infinity<span className="text-rose-700">Events</span></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu gap-5 menu-horizontal px-1">
+                <ul className="flex gap-5 menu-horizontal px-1">
                     {NavLinks}
                 </ul>
             </div>
             <div className="navbar-end gap-6 px-4">
-                <Link className="font-semibold text-white">Login</Link>
-                <Link className="font-semibold text-white">Register</Link>
+                <Link to="/login" className="font-semibold">Login</Link>
+                <Link to="/register" className="font-semibold ">Register</Link>
             </div>
         </div>
     );

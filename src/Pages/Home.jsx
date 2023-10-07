@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
             <Banner/>
-            <div className="max-w-6xl mx-auto">
+            <div>
                 <AllServises/>
             </div>
             <UserReviews/>

@@ -8,7 +8,8 @@
     "ticketPrice": "$75.00",
     "description": "Summer Music Festival is a vibrant celebration of music and community. Experience the thrill of live performances from renowned artists in a festive atmosphere. From pulsating beats to soulful melodies, immerse yourself in the magic of summer nights, creating unforgettable memories with friends and fellow music lovers. Join us for a musical journey under the stars!",
     "userId": 101,
-    "userName": "MusicLover123",
+    "userImg": "https://i.ibb.co/6DxnSxw/linkedin-sales-solutions-p-At-A8xe-i-VM-unsplash-1.jpg",
+    "userName": "Jean C. Sullivan",
     "rating": 4,
     "comment": "Fantastic event! The lineup was amazing, and the atmosphere was electric."
   },
@@ -21,7 +22,8 @@
     "ticketPrice": "$35.00",
     "description": "Classic Theater Night is a distinguished service curated for enthusiasts of timeless drama and theatrical artistry. Immerse yourself in the elegance of the classics as renowned actors breathe life into iconic characters. From Shakespearean tragedies to Greek epics, this service offers a curated selection of historically significant plays, meticulously staged for an immersive and authentic experience. Revel in the grandeur of period costumes, meticulously designed sets, and unparalleled acting talent, all converging to transport you to different eras and narratives. Whether you're a theater aficionado or a newcomer seeking the magic of the stage, Classic Theater Night promises unforgettable evenings filled with cultural richness, artistic excellence, and the sheer joy of live performance.",
     "userId": 102,
-    "userName": "TheaterBuff",
+    "userImg": "https://i.ibb.co/W0HmsWH/christina-wocintechchat-com-SJv-Dxw0azqw-unsplash-1.jpg",
+    "userName": "Erica C. Saddler",
     "rating": 5,
     "comment": "Incredible performance! The actors brought Shakespeare's words to life."
   },
@@ -34,7 +36,8 @@
     "ticketPrice": "$20.00",
     "description": "Kick off the FilmFest with the premiere of a highly anticipated film.",
     "userId": 103,
-    "userName": "MovieBuff87",
+    "userImg": "https://i.ibb.co/6DxnSxw/linkedin-sales-solutions-p-At-A8xe-i-VM-unsplash-1.jpg",
+    "userName": "Jean C. Sullivan",
     "rating": 4,
     "comment": "Great movie selection and a well-organized event."
   },
@@ -47,7 +50,8 @@
     "ticketPrice": "$25.00",
     "description": "Get ready to laugh your heart out with top comedians in the industry.Stand-up Comedy Night promises laughter-filled evenings in a cozy ambiance. Our service offers a lineup of top-notch comedians, delivering rib-tickling performances. Enjoy a night of hilarity with friends as we provide comfortable seating, a well-stocked bar, and delectable bites. Get ready for an uproarious experience, where every joke lands and smiles abound!",
     "userId": 104,
-    "userName": "LaughOutLoud",
+    "userImg": "https://i.ibb.co/T1b1dHf/alexander-hipp-i-EEBWg-Y-6l-A-unsplash-1.jpg",
+    "userName": "Andrew M. Owens",
     "rating": 5,
     "comment": "Hilarious show! My cheeks hurt from laughing so much."
   },
@@ -60,7 +64,8 @@
     "ticketPrice": "$90.00",
     "description": "Cheer for your favorite NBA team in the thrilling championship finals.",
     "userId": 105,
-    "userName": "SportsFanatic22",
+    "userImg": "https://i.ibb.co/W0HmsWH/christina-wocintechchat-com-SJv-Dxw0azqw-unsplash-1.jpg",
+    "userName": "Erica C. Saddler",
     "rating": 5,
     "comment": "Intense game! Great atmosphere and fantastic plays."
   },
@@ -73,7 +78,8 @@
     "ticketPrice": "Free Entry",
     "description": "Be the first to experience groundbreaking tech products and innovations.",
     "userId": 106,
-    "userName": "TechEnthusiast",
+    "userImg": "https://i.ibb.co/T1b1dHf/alexander-hipp-i-EEBWg-Y-6l-A-unsplash-1.jpg",
+    "userName": "Andrew M. Owens",
     "rating": 4,
     "comment": "Exciting event! Got to see the latest tech advancements up close."
   }

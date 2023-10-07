@@ -12,7 +12,7 @@ const AllServises = () => {
             .then(data => setServiceCards(data))
     }, [])
     return (
-        <div className="my-10">
+        <div className="max-w-6xl mx-auto my-10" >
             <div className="text-center text-4xl font-bold uppercase">
                 <h2>Our Services</h2>
             </div>
