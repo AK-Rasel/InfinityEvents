@@ -18,7 +18,8 @@ import Register from "../Pages/Register/Register";
         },
         {
           path:"/serviceCard/:id",
-          element:<ServiceCardDetail/>
+          element:<ServiceCardDetail/>,
+          loader:() => fetch("/public/eventData.json")
         },
         {
           path:"/abouts",

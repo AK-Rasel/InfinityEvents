@@ -19,10 +19,10 @@ const AllServises = () => {
             <div className="grid grid-cols-1 px-5  md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
                 {
                     serviceCards.map(serviceCard => (
-                        <Link to={`/serviceCard/${serviceCard.id}`} key={serviceCard.id} className="card  bg-gray-200 ">
+                        <Link to={`/serviceCard/${serviceCard.id}`} key={serviceCard.id} className="card  bg-rose-700 text-white  ">
                             <figure><img className="w-full h-64 " src={serviceCard.service_img} alt="Shoes" /></figure>
-                            <div className="card-body ">
-                                <h2 className="card-title">{serviceCard.serviceName}</h2>
+                            <div className="card-body p-3">
+                                <h2 className=" text-center">{serviceCard.serviceName}</h2>
                             </div>
                         </Link>
                     ))
