@@ -1,8 +1,21 @@
 
-import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContextProvider } from "../../../AuthProvider/AuthProvider";
 
 
 const Navber = () => {
+    const { user, logOut } = useContext(AuthContextProvider)
+    const naviget = useNavigate()
+    const LogoutEvent = () => {
+        logOut()
+            .then(() => {
+                naviget("/login")
+                console.log("Log Out Succsses Fully")
+            })
+            .catch(error => console.error(error))
+    }
+
 
     const NavLinks = <>
         <li><NavLink
@@ -51,8 +64,16 @@ const Navber = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-6 px-4">
-                <Link to="/login" className="font-semibold">Login</Link>
-                <Link to="/register" className="font-semibold hidden md:block ">Register</Link>
+            {
+                user && <span className="underline text-rose-400">{user.email}</span>
+            }
+                {
+                    user ? <button className="font-semibold" onClick={LogoutEvent}>Log Out</button> : <>
+                    <Link to="/login" className="font-semibold">Login</Link>
+                    <Link to="/register" className="font-semibold hidden md:block ">Register</Link>
+                    </>
+                    
+                }
 
             </div>
         </div>

@@ -6,6 +6,9 @@ import AllServises from "../Components/Services/AllEvents/AllServises";
 import AboutsUs from "../Pages/AboutsUs/AboutsUs";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivetRouter from "../PrivetRouter/PrivetRouter";
+
+import Loading from "../Components/Loading/Loging";
 
  const createRouter = createBrowserRouter([
     {
@@ -18,7 +21,7 @@ import Register from "../Pages/Register/Register";
         },
         {
           path:"/serviceCard/:id",
-          element:<ServiceCardDetail/>,
+          element:<PrivetRouter><ServiceCardDetail/></PrivetRouter> ,
           loader:() => fetch("/public/eventData.json")
         },
         {
@@ -27,7 +30,7 @@ import Register from "../Pages/Register/Register";
         },
         {
           path:"/servises",
-          element:<AllServises/>
+          element:<Loading><AllServises/></Loading> 
         },
         {
           path:"/login",
