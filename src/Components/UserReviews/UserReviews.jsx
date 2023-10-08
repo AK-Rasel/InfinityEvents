@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Marquee from "react-fast-marquee";
+
 
 
 const UserReviews = () => {
@@ -11,21 +11,21 @@ const UserReviews = () => {
     }, [])
     return (
 
-        <div>
-            <div className="text-center text-4xl font-bold uppercase">
-                <h2>Our Services</h2>
+        <div className="max-w-6xl mx-auto">
+            <div  data-aos="fade-up" className=" text-center text-4xl font-bold uppercase mb-9">
+                <h2>User <span className="text-rose-700">Review</span></h2>
             </div>
-            <Marquee speed={50} className="space-x-5">
-            <div className="grid grid-cols-5 space-x-1 gap-5">
+
+            <div className="flex flex-wrap gap-6 justify-center">
                 {
                     userReviews?.slice(0, 5).map(userReview => (
                         <div key={userReview.id}>
-                            <div className=" rounded-xl bg-base-100 shadow-xl my-12">
+                            <div data-aos="fade-up" className=" w-80 h-56  rounded-xl bg-rose-500 text-white shadow-xl ">
 
                                 <div className="card-body">
                                     <div className="flex gap-4">
                                         <div className="avatar ">
-                                            <div className="w-12 h-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                            <div className="w-12 h-12 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
                                                 <img src={userReview.userImg} />
                                             </div>
 
@@ -33,16 +33,14 @@ const UserReviews = () => {
                                         <div>
                                             <h2 className="card-title">{userReview.userName}</h2>
                                             <div className="rating">
-                                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
-                                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                                            </div>
+                                        <span className="mr-1">{userReview.rating}</span>
+                                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 " checked />
+
+                                    </div>
                                         </div>
                                     </div>
-
-                                    <p>{userReview.comment}</p>
+                                    
+                                    <p className="mt-4">{userReview.comment}</p>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +48,7 @@ const UserReviews = () => {
                     ))
                 }
             </div>
-        </Marquee>
+
         </div>
 
     );

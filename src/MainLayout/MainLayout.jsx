@@ -10,7 +10,7 @@ const MainLayout = () => {
             <Navber/>
             </div>
             <Outlet/>
-            <div className="max-w-6xl mx-auto">
+            <div data-aos="zoom-in" className="max-w-6xl mx-auto">
             <Footer/>
             </div>
         </div>
