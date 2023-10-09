@@ -24,7 +24,7 @@ import Error from "../Components/Error/Error";
         {
           path:"/serviceCard/:id",
           element:<PrivetRouter><ServiceCardDetail/></PrivetRouter> ,
-          loader:() => fetch("/public/eventData.json")
+          loader:() => fetch("/eventData.json")
         },
         {
           path:"/abouts",

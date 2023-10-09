@@ -6,7 +6,7 @@
 
 ## Website Features
 
-- Home /AboutUs /Servises
+- Home /AboutUs /Servises /Banner /Footer
 - Private/protected route
 - All device responsive
 - Animated all Website
