@@ -4,6 +4,10 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContextProvider } from "../../../AuthProvider/AuthProvider";
 
 
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const Navber = () => {
     const { user, logOut } = useContext(AuthContextProvider)
     const naviget = useNavigate()
@@ -11,7 +15,7 @@ const Navber = () => {
         logOut()
             .then(() => {
                 naviget("/login")
-                console.log("Log Out Succsses Fully")
+                toast("Log Out Succsses Fully")
             })
             .catch(error => console.error(error))
     }

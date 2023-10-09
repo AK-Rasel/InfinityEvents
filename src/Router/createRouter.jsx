@@ -9,11 +9,13 @@ import Register from "../Pages/Register/Register";
 import PrivetRouter from "../PrivetRouter/PrivetRouter";
 
 import Loading from "../Components/Loading/Loging";
+import Error from "../Components/Error/Error";
 
  const createRouter = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout/>,
+      errorElement:<Error/>,
       children:[
         {
             path:"/",

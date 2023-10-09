@@ -1,27 +1,39 @@
 // import { useContext } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContextProvider } from '../../AuthProvider/AuthProvider';
+
 import { useContext, useState } from 'react';
 
 
 
+
 const Register = () => {
-    const { createRegister } = useContext(AuthContextProvider);
+    const { createRegister, user } = useContext(AuthContextProvider);
     const naviget = useNavigate()
-    const [registerError, setRegisterError] = useState('')
+    const [registerError, setRegisterError] = useState('');
+    const [viewPassword, setViewPassword] = useState(false);
+
     // const [registerSuccess, setRegisterSuccess] = useState('')
     // email and password register
     const registerEvent = (e) => {
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value
-         if (password.length < 6) {
+
+
+        if (password.length < 6) {
             setRegisterError("Password must has at last 6 Characters");
             return;
-         }else if (!/[A-Z]/.test(password)) {
-            setRegisterError('Your password should have at least one uppercase characters.')
+        } else if (!/[A-Z]/.test(password)) {
+            setRegisterError('Must give an upper case letter.')
             return;
-         }
+        } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+            setRegisterError('Must include a special character')
+            return;
+        } else if (email === user.email) {
+            console.log('all ready hear')
+            return;
+        }
 
         // reset error 
         setRegisterError('')
@@ -47,11 +59,7 @@ const Register = () => {
                 <h1 data-aos="fade-right" className="text-5xl text-center font-bold">Register <span className="text-rose-700">now!</span></h1>
                 <div className="hero ">
                     <div className="hero-content  flex-col-reverse lg:flex-row-reverse gap-16">
-                        {/* <div  className="text-center lg:text-left">
 
-                        <div  data-aos="zoom-in" className=" mb-3 rounded  py-2 px-8 border border-gray-400 flex items-center gap-2 text-lg font-semibold">Google <AiOutlineGoogle size={25}/></div>
-                        <div  data-aos="zoom-in" className="rounded py-2 px-8 border border-gray-400 flex items-center gap-2 text-lg font-semibold">FaceBook <GrFacebook/> </div>
-                    </div> */}
                         <div className="card flex-shrink-0 w-full max-w-sm  bg-base-100 ">
                             <form onSubmit={registerEvent}>
                                 <div data-aos="fade-up" className="form-control">
@@ -65,19 +73,30 @@ const Register = () => {
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" placeholder="new password" name='password' className="input input-bordered" required />
+                                    <div className="relative">
+                                        <input
+                                            required
+                                            type={viewPassword ? "text" : "password"} // steat change condition
+                                            placeholder="password"
+                                            name="password"
+                                            className="input input-bordered w-full" />
+                                        
+                                        <span className="text-xl absolute top-1/2 -translate-y-1/2 tr left-[80%] bottom-0 cursor-pointer" onClick={() => setViewPassword(!viewPassword)}>
+                                            {
+                                                viewPassword ? <span className="text-base">Hide</span> : <span className="text-base ">Show</span>
+                                            }
+                                        </span>
+                                    </div>
                                     <label className="label">
-                                        {/* <a href="#" className="label-text-alt link link-hover">Worning Masseges</a> */}
+
                                         {
                                             registerError && <span className="text-red-600">{registerError}</span>
                                         }
-                                        {/* {
-                                            registerSuccess && <span className="text-green-600">{registerSuccess}</span>
-                                        } */}
+
                                     </label>
                                 </div>
                                 <div data-aos="fade-up" className="form-control mt-6">
-                                    <button className="btn bg-rose-700 text-white">Register</button>
+                                    <button className="btn hover:bg-rose-500  bg-rose-700 text-white">Register</button>
                                 </div>
                             </form>
                             <p data-aos="fade-up" className="mt-6">Already have an account ?<Link data-aos="fade-up" to="/login" className="font-semibold hover:underline text-rose-700 hover:text-rose-500">Login Here</Link></p>
