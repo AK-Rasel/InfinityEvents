@@ -3,11 +3,14 @@ import { AiOutlineGoogle } from 'react-icons/ai';
 
 import { AuthContextProvider } from "../../AuthProvider/AuthProvider";
 import { useContext, useState } from "react";
-import { ToastContainer } from "react-toastify";
+import {  toast } from "react-toastify";
+
+
 
 const Login = () => {
     const { googleLogin, login,user } = useContext(AuthContextProvider);
     const [viewPassword, setViewPassword] = useState(false);
+    const [loginError , setLoginError] = useState('')
     const naviget = useNavigate()
     const loginEven = (e) => {
 
@@ -22,27 +25,29 @@ const Login = () => {
 
 
         login(email, password)
-            .then(result => {
+            .then(() => {
                 e.target.reset()
-                naviget("/")
-                console.log(result.user.email)
+                naviget("/servises")
+                toast.success("login Succsses Fully")
+                // console.log(result.user.email)
             })
-            .catch(error => console.error(error.message))
+            .catch(error => setLoginError(error.message))
     }
 
     // Google Event
     const singInWithGoogleHandele = () => {
         googleLogin()
             .then(result => {
-                naviget("/")
+                naviget("/servises")
+                toast.success("Google With login Succsses Fully")
                 console.log(result.user)
             })
-            .catch(error => console.error(error))
+            .catch(error => setLoginError(error.message))
 
     }
     return (
         <div className="min-h-[70vh] max-w-6xl mx-auto grid items-center">
-            <ToastContainer />
+            
             <div>
                 <h1 data-aos="fade-right" className="text-5xl text-center font-bold">Login <span className="text-rose-700">now!</span></h1>
                 <div className="hero ">
@@ -81,7 +86,11 @@ const Login = () => {
                                         </span>
                                     </div>
                                     <label className="label">
-                                        <a href="#" className="label-text-alt link link-hover">Worning Masseges</a>
+
+                                        {
+                                            loginError && <span className="text-red-600">{loginError}</span>
+                                        }
+
                                     </label>
                                 </div>
                                 <div className="form-control mt-6">

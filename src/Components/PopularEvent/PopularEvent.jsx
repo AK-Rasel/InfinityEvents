@@ -10,7 +10,7 @@ const PopularEvent = () => {
             .then(data => setPupolerEventCards(data))
     }, [])
     return (
-        <div>
+        <div className="px-3">
             <div>
                 <div  data-aos="fade-up" className="text-center text-4xl font-bold uppercase my-9">
                     <h2 >Popular <span className="text-rose-700"> Event</span></h2>

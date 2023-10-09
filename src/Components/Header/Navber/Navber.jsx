@@ -4,7 +4,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContextProvider } from "../../../AuthProvider/AuthProvider";
 
 
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -15,7 +15,7 @@ const Navber = () => {
         logOut()
             .then(() => {
                 naviget("/login")
-                toast("Log Out Succsses Fully")
+                toast.success("Log Out Succsses Fully")
             })
             .catch(error => console.error(error))
     }
@@ -50,7 +50,7 @@ const Navber = () => {
         </NavLink></li>
     </>
     return (
-        <div  className="navbar my-4">
+        <div className="navbar my-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -58,6 +58,19 @@ const Navber = () => {
                     </label>
                     <ul tabIndex={0} className=" shadow-lg space-y-1 font-semibold text-lg menu-sm gap-6 dropdown-content mt-3 z-[1] p-8 bg-base-100 rounded-box w-[50vh] ">
                         {NavLinks}
+                        <div className="mt-3">
+                            {
+                                user && <div className=" flex flex-row-reverse gap-3 items-center">
+                                    <span className="underline text-rose-400">{user.displayName}</span> <div>
+                                        <div className="avatar online">
+                                            <div className="w-6 rounded-full  ring ring-rose-600 ring-offset-base-100 ring-offset-1">
+                                                <img src={user.photoURL ? user.photoURL : "https://i.ibb.co/PgC7Rfy/Screenshot-4.png"} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
                     </ul>
                 </div>
                 <Link to="/" className=" font-bold text-3xl bg-white border-none normal-case"> Infinity<span className="text-rose-700">Events</span></Link>
@@ -68,15 +81,23 @@ const Navber = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-6 px-4">
-            {
-                user && <span className="underline text-rose-400">{user.email}</span>
-            }
+                <div className="hidden lg:block">
+                    {
+                        user && <div className="flex flex-row-reverse gap-3">
+                            <span className="underline text-rose-400 font-semibold">{user.displayName}</span> <div className="avatar online">
+                                <div className="w-6 rounded-full  ring ring-rose-600 ring-offset-base-100 ring-offset-1">
+                                    <img src={user.photoURL ? user.photoURL : "https://i.ibb.co/PgC7Rfy/Screenshot-4.png"} />
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
                 {
                     user ? <button className="font-semibold" onClick={LogoutEvent}>Log Out</button> : <>
-                    <Link to="/login" className="font-semibold">Login</Link>
-                    <Link to="/register" className="font-semibold hidden md:block ">Register</Link>
+                        <Link to="/login" className="font-semibold">Login</Link>
+                        <Link to="/register" className="font-semibold hidden md:block ">Register</Link>
                     </>
-                    
+
                 }
 
             </div>

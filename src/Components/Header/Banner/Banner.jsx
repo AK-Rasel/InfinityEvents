@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -6,9 +7,11 @@ const Banner = () => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-          <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-          <button className="btn btn-primary">Get Started</button>
+          <h1 className="mb-5  text-5xl font-bold"><span className="text-7xl ">Welcome</span> <br /> <span className="text-4xl">Our Infinity Events</span></h1>
+          <p className="mb-5">We organize for all kinds of events, you can go to the event booking service</p>
+          <Link to="/servises">
+          <button className="btn bg-rose-700 text-white outline-none border-none hover:bg-rose-600">Our Services</button>
+          </Link>
         </div>
       </div>
     </div>

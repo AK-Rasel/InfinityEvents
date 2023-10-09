@@ -18,12 +18,12 @@ const ServiceCardDetail = () => {
     return (
         <div>
             <div className="hero min-h-[50vh]">
-                <div className="hero-content  flex-row-reverse">
-                    <img src={img} className="max-w-lg rounded-lg " />
-                    <div>
-                        <h1 className="text-5xl font-bold">{eventTitle}</h1>
-                        <p className="py-6">{description}</p>
-                        <button className="btn bg-rose-700 text-white">Ticket Price {ticketPrice}</button>
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <img data-aos="zoom-in-up" src={img} className="lg:max-w-lg max-w-xs rounded-lg " />
+                    <div className="text-center">
+                        <h1 data-aos="fade-down" className="text-5xl font-bold">{eventTitle}</h1>
+                        <p data-aos="fade-down" className="py-6">{description}</p>
+                        <button data-aos="fade-down" className="btn bg-rose-700 hover:bg-rose-600 text-white">Booking Price {ticketPrice}</button>
                     </div>
                 </div>
             </div>

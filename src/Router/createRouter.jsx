@@ -28,7 +28,7 @@ import Error from "../Components/Error/Error";
         },
         {
           path:"/abouts",
-          element:<AboutsUs/>
+          element:<PrivetRouter><AboutsUs/></PrivetRouter>
         },
         {
           path:"/servises",

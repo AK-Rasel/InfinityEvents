@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import Banner from "../Components/Header/Banner/Banner";
 import PopularEvent from "../Components/PopularEvent/PopularEvent";
 import AllServises from "../Components/Services/AllEvents/AllServises";
@@ -16,6 +17,7 @@ const Home = () => {
             <div className="max-w-6xl mx-auto">
                 <PopularEvent/>
             </div>
+            
         </div>
     );
 };

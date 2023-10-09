@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
+
 const AllServises = () => {
     const [serviceCards, setServiceCards] = useState([])
 
@@ -13,6 +14,7 @@ const AllServises = () => {
     }, [])
     return (
         <div  className="max-w-6xl mx-auto my-10" >
+            
             <div className="text-center text-4xl font-bold uppercase">
                 <h2  data-aos="zoom-in">Our <span className="text-rose-700">Services</span></h2>
             </div>
@@ -28,6 +30,7 @@ const AllServises = () => {
                     ))
                 }
             </div>
+            
         </div>
     );
 };

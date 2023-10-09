@@ -3,12 +3,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContextProvider } from '../../AuthProvider/AuthProvider';
 
 import { useContext, useState } from 'react';
+import {  toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 
 
 
 const Register = () => {
-    const { createRegister, user } = useContext(AuthContextProvider);
+    const { createRegister, } = useContext(AuthContextProvider);
     const naviget = useNavigate()
     const [registerError, setRegisterError] = useState('');
     const [viewPassword, setViewPassword] = useState(false);
@@ -22,7 +24,7 @@ const Register = () => {
 
 
         if (password.length < 6) {
-            setRegisterError("Password must has at last 6 Characters");
+            setRegisterError("Password must contain last 6 characters");
             return;
         } else if (!/[A-Z]/.test(password)) {
             setRegisterError('Must give an upper case letter.')
@@ -30,10 +32,8 @@ const Register = () => {
         } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
             setRegisterError('Must include a special character')
             return;
-        } else if (email === user.email) {
-            console.log('all ready hear')
-            return;
-        }
+        } 
+       
 
         // reset error 
         setRegisterError('')
@@ -42,10 +42,11 @@ const Register = () => {
         // console.log(password, email)
 
         createRegister(email, password)
-            .then(result => {
+            .then(() => {
                 e.target.reset()
                 naviget("/")
-                console.log(result.user)
+                toast.success("Register Succsses Fully")
+                // console.log(result.user)
                 // setRegisterSuccess("Register Successfully")
             })
             .catch(error => {
