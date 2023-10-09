@@ -1,8 +1,22 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Website Name
 
-Currently, two official plugins are available:
+- InfinityEvents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Website Features
+
+- Home /AboutUs /Servises
+- Private/protected route
+- All device responsive
+- Animated all Website
+- Login and register validated
+- There are 6 category cards which show in details
+
+
+
+
+## Live link
+```bash
+https://infinity-events-4206d.web.app
+
