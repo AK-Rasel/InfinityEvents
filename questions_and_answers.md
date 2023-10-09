@@ -44,7 +44,7 @@ sum(1, "2");
 
 #### Answer: ?
 
-<i>Addition or console.log()l returns strings and numbers, not addition like normal numbers.</i>
+<i>Addition or console.log() returns strings and numbers, not addition like normal numbers.</i>
 
 </p>
 </details>
