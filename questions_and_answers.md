@@ -16,7 +16,7 @@ console.log(greetign);
 - C: `undefined`
 
 <details>
-<summary><b>-A</b></summary><p>
+<summary><b>A</b></summary><p>
 
 #### Answer: ?
 
@@ -40,7 +40,7 @@ sum(1, "2");
 - C: `"12"`
 - D: `3`
 
-<details><summary><b>-C</b></summary><p>
+<details><summary><b>C</b></summary><p>
 
 #### Answer: ?
 
@@ -65,7 +65,7 @@ console.log(food);
 - C: `['🍝', '🍕', '🍫', '🥑', '🍔']`
 - D: `ReferenceError`
 
-<details><summary><b>-A</b></summary>
+<details><summary><b>A</b></summary>
 <p>
 
 #### Answer: ?
@@ -91,7 +91,7 @@ console.log(sayHi());
 - C: `Hi there, null`
 - D: `ReferenceError`
 
-<details><summary><b>-B</b></summary>
+<details><summary><b>B</b></summary>
 <p>
 
 #### Answer: ?
@@ -119,7 +119,7 @@ console.log(count);
 - C: 3
 - D: 4
 
-<details><summary><b>-C</b></summary>
+<details><summary><b>C</b></summary>
 <p>
 
 #### Answer: ?
